@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Constancia</title>
-  <style>
-    body { font-family: sans-serif; padding: 2em; }
-    .constancia { border: 1px solid #ccc; padding: 2em; }
-  </style>
-</head>
-<body>
-  <div class="constancia">
-    <h2>Constancia de Participación</h2>
-    <p>Otorgada a: <strong id="nombre">---</strong></p>
-    <p>CURP: <span id="curp">---</span></p>
-    <p>Fecha: <span id="fecha"></span></p>
-  </div>
-
+<head> 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> 
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="css/log_css.css"> 
+</head> 
+  <body>
+<div class="wrapper fadeInDown"> 
+  <div id="formContent"> 
+    <div class="fadeIn first"> 
+        <img src="https://dgipo-cespd.edomex.gob.mx/logo_colibri.png" id="icon"  /><br>  
+          <p align='center'><b><font color=#8a2036>Coordinación Estatal del Servicio Profesional Docente</font></b></p>  
+    </div>  
+  </div>  
+    <br> 
+    <br><br> 
+  <div id="formContent"> 
+    <div class="fadeIn first"> 
+          
+  <table class='table table-hover'><tbody> 
+<tr><td colspan=2 align='center'> <b>EVALUACIÓN DIAGNÓSTICA</b></td></tr>
+<tr><td>Ciclo escolar:</td><td> null</td></tr>
+<tr><td>Nombre del participante:</td><td> null</td></tr>
+<tr><td>CURP: </td><td><span id="curp">---</span></td></tr>
+</tbody></table>  
+    </div>  
+</div>  
+</div>  
+</body> 
   <script>
     const params = new URLSearchParams(window.location.search);
-    document.getElementById('nombre').textContent = params.get('nombre') || 'No especificado';
     document.getElementById('curp').textContent = params.get('curp') || 'No especificado';
-    document.getElementById('fecha').textContent = new Date().toLocaleDateString();
   </script>
-</body>
-</html>
+</html>  
