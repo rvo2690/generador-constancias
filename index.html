@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Constancia</title>
+  <style>
+    body { font-family: sans-serif; padding: 2em; }
+    .constancia { border: 1px solid #ccc; padding: 2em; }
+  </style>
+</head>
+<body>
+  <div class="constancia">
+    <h2>Constancia de Participación</h2>
+    <p>Otorgada a: <strong id="nombre">---</strong></p>
+    <p>CURP: <span id="curp">---</span></p>
+    <p>Fecha: <span id="fecha"></span></p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('nombre').textContent = params.get('nombre') || 'No especificado';
+    document.getElementById('curp').textContent = params.get('curp') || 'No especificado';
+    document.getElementById('fecha').textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>
